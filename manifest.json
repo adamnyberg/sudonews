@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "sudonews",
-  "version": "0.1.0",
+  "version": "0.2.0",
 
   "description": "Give yourself admin permissions to news ;)",
 
@@ -9,7 +9,7 @@
   "content_scripts": [
       {
         "run_at": "document_end",
-        "matches": ["http://www.di.se/di/artiklar/*"],
+        "matches": ["http://www.di.se/*"],
         "js": ["main.js"]
       }
     ]
