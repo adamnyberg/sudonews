@@ -1,21 +1,27 @@
-setTimeout(function () {
-  var contentDoc = document.querySelector('frame[name="contentFrame"]').contentWindow.document;
-  var headerDoc = document.querySelector('frame[name="headerFrame"]').contentWindow.document;
+removeTrash = function () {
 
-  var overlayConntent = contentDoc.getElementById('message_modal');
-  overlayConntent.style.display = 'none';
-  contentDoc.documentElement.style.overflow = '';
+  var header = document.querySelector('.di_panorama-wrapper');
+  if(header) {
+    header.parentElement.removeChild(header);
+  }
 
-  var content = contentDoc.querySelector('.paywall-content');
-  var contentParent = content.parentElement;
-  content.style.height = null;
-  contentParent.removeChild(content.nextSibling);
+  var content = document.querySelector('.paywall-content');
+  if (content) {
+    content.style.height = null;
+  }
 
-  var container = contentDoc.getElementById('paywall-container');
-  var containerParent = container.parentElement;
-  containerParent.removeChild(container);
+  var paywallMask = document.querySelector('.paywall-mask');
+  if (paywallMask) {
+    paywallMask.parentElement.removeChild(paywallMask);
+  }
 
-  // remove modal
-  headerDoc.getElementById('close-popup').click();
+  var paywall = document.getElementById('serviceplusPaywallpaywall-container');
+  if (paywall) {
+    paywall.parentElement.removeChild(paywall);
+  }
 
-}, 10000);
+}
+
+for (time of [500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 10000]) {
+  setTimeout(removeTrash, time);
+}
