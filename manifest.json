@@ -9,7 +9,7 @@
   "content_scripts": [
       {
         "run_at": "document_end",
-        "matches": ["http://www.di.se/*"],
+        "matches": ["http://www.di.se/*", "http://weekend.di.se/*"],
         "js": ["main.js"]
       }
     ]

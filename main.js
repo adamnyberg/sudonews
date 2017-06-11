@@ -1,6 +1,6 @@
 removeTrash = function () {
 
-  var header = document.querySelector('.di_panorama-wrapper');
+  var header = document.querySelector('.di_header');
   if(header) {
     header.parentElement.removeChild(header);
   }
